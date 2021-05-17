@@ -1,0 +1,74 @@
+<div class="title__wrapper">
+	<h4 class="title__wrapper--pretitle"> {{ title_wrapper[0] }} </h4>
+	<h1 class="title__wrapper--title"> {{ title_wrapper[1] }} </h1>
+	<h3 class="title__wrapper--postitle"> {{ title_wrapper[2] }}</h3>
+</div>
+
+<div class="price__wrapper">
+	<h5 class="price__wrapper--text">{{ this.price_wrapper[0] }}</h5>
+	<h2 class="price__wrapper--price"> {{ this.price_wrapper[1] }} </h2>
+</div>
+
+<div class="characteristics__wrapper">
+	<ul class="characteristics__wrapper--title">
+		<li (click)=" handler_event_see_text ($event)" *ngFor="let item of characteristics_wrapper[0], index as idx" value="{{ idx }}">{{ item }}</li>
+	</ul>
+	<div class="characteristics__wrapper--info">
+		<article *ngFor="let item of characteristics_wrapper[1], index as idx" id="id-article-{{ idx }}">
+			{{ item }}
+		</article>
+	</div>
+
+</div>
+
+<div class="choose__wrapper">
+	<h3 class="choose__wrapper--title">{{ choose_wrapper[0] }}</h3>
+	<div *ngFor="let card of card_info, index as idx" class="choose__wrapper--{{ idx }}">
+		<view-card-component
+			[id]="card.id"
+			[title]="card.title"
+			[text]="card.text"
+			[price]="card.price[0]"
+			[price_value]="card.price[1]">
+		</view-card-component>
+	</div>
+</div>
+
+<div class="coverange__wrapper">
+	<h3 class="coverange__wrapper--title">{{ coverange_wrapper[0] }}</h3>
+
+	<div *ngFor="let card of card_info_coverange,  index as idx" class="coverange__wrapper--{{ idx }}">
+		<view-card-component
+			[id]="card.id"
+			[title]="card.title"
+			[text]="card.text"
+			[price]="card.price[0]"
+			[price_value]="card.price[1]">
+		</view-card-component>
+	</div>
+</div>
+
+<div class="features__wrapper">
+	<h3 class="features__wrapper--title">{{ features_wrapper[0] }}</h3>
+
+	<div *ngFor="let card of card_info_features, index as idx" class="features__wrapper--{{ idx }}">
+		<view-card-component
+			[id]="card.id"
+			[title]="card.title"
+			[text]="card.text"
+			[price]="card.price[0]"
+			[price_value]="card.price[1]">
+		</view-card-component>
+	</div>
+</div>
+
+
+<div class="specification__wrapper">
+	<h3 class="specification__wrapper--title">{{ specification_wrapper[0] }}</h3>
+	<table class="table">
+		<tr class="table--column" *ngFor="let items of specification_wrapper[1], index as i ">
+			<td class="table--column__one"> {{ items.type }} </td>
+			<td class="table--column__two"> {{ items.specifications}} </td>
+		</tr>
+	</table>
+</div>

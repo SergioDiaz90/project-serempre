@@ -1,0 +1,10 @@
+<div (click)="selected_figure( $event )" [id]="id" class="card">
+	<div class="card--text">
+		<h5> {{ title }} </h5>
+		<p> {{ text }}</p>
+	</div>
+
+	<div *ngIf="price" class="card--price">
+		<h5>+ ${{ price_value }}</h5>
+	</div>
+</div>

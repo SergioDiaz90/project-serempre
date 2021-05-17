@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*Colors*/
+
+$color-primary-red: #d0364c;
+$color-primary-blue: #1AA3D9;
+$color-primary-lightblue: #66bfec;
+$color-lightblue-opacity: rgba(172, 222, 242, 0.8);
+$color-primary-white: #F2F2F2;
+$color-primary-black: #080808;
+$color-border-hover: #b7bdc7;
+$color-text: #808793;
+
+$bg-color: white;
+
+/*fonts*/
+
+@font-face{
+	font-family: "circular-std-bold";
+	src: url('../src/assets/fonts/Circular-Std-Bold.otf') format('otf'),
+		url('../src/assets/fonts/Circular-Std-Bold.ttf') format('ttf'),
+		url('../src/assets/fonts/Circular-Std-Bold.ttf') format('woff'),
+}
+
+@font-face{
+	font-family: "circular-std-book";
+	src: url('../src/assets/fonts/Circular-Std-Book.otf') format('otf'),
+		url('../src/assets/fonts/Circular-Std-Book.ttf') format('ttf'),
+		url('../src/assets/fonts/Circular-Std-Book.ttf') format('woff'),
+}
+
+@font-face{
+	font-family: "circular-std-medium";
+	src: url('../src/assets/fonts/Circular-Std-Medium.otf') format('otf'),
+		url('../src/assets/fonts/Circular-Std-Medium.ttf') format('ttf'),
+		url('../src/assets/fonts/Circular-Std-Medium.ttf') format('woff'),
+}
+
+/*styles tags*/
+body {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding: 0;
+	font-family: circular-std-bold;
+	font-weight: bold;
+}
+
+p {
+	margin:0;
+	padding: 0;
+	font-size: 13px;
+	font-family: circular-std-book;
+	color: $color-text;
+}
+
+strong, span {
+	font-family: circular-std-medium;
+}
+
+.border-selected {
+	border: 2px solid $color-primary-blue;
+}

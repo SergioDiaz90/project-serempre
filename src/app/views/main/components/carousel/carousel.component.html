@@ -1,0 +1,21 @@
+<figure id="ref_figure_img" class="carousel__img--focus">
+	<img [src]="info_carousel.headphone_1" alt="">
+</figure>
+<div class="carousel__img--galery">
+	<figure
+		(mouseenter)="set_src_image_focus ( $event.target )"
+		(mouseleave)="selected_figure( $event.target )"
+		(touchstart)="set_src_image_focus ( $event.target )"
+		(touchend)="selected_figure( $event.target )"
+		*ngFor="let img of galery, index as idx"
+		id="id-figure-{{ idx }}"
+		class="carousel__img--galery--{{ idx }} box-style">
+			<img src="{{ img }}" alt=""  >
+	</figure>
+</div>
+<ul class="list--icons">
+	<li *ngFor="let icon of icons, index as idx" class="list--icons--items--{{ idx }} box-style box-icons">
+		<i class="{{ icon }}"></i>
+		<span>{{ text_icons[idx] }}</span>
+	</li>
+</ul>

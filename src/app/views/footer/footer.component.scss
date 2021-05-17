@@ -1,0 +1,89 @@
+@import '../../../styles.scss';
+
+.footer--wrapper {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	background-color: $color-primary-white;
+
+	.footer {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-areas: 'footer__text footer__buy';
+		grid-gap: 20px;
+		align-items: center;
+
+		@media (max-width: 321px ) {
+			grid-template-areas: 'footer__buy footer__buy';
+		}
+
+		&__text {
+			display: flex;
+			justify-content: space-between;
+			grid-area: footer__text;
+
+			&--left, &--right{
+				width: 47%;
+				&--title {
+					margin: 0 0 12px 0;
+					font-weight: normal;
+				}
+
+			}
+		}
+
+		@media (max-width: 769px) {
+			&__text {
+				flex-direction: column;
+				&--left, &--right{
+					p {
+						display: none;
+					}
+				}
+			}
+		}
+
+
+		&__buy {
+			display: flex;
+			grid-area: footer__buy;
+			justify-content: flex-end;
+			&--price {
+				width: 80%;
+				text-align: right;
+			}
+
+			&--btn {
+				width: 20%;
+				margin-left: 40px;
+				background-color: $color-primary-blue;
+				color: $bg-color;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					background-color: $color-primary-lightblue;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+
+		}
+
+		@media (max-width: 321px) {
+			&__text {
+				display: none;
+			}
+
+			&__buy {
+				width: 100%;
+
+			}
+		}
+	}
+}
