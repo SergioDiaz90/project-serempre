@@ -32,6 +32,10 @@ One of the things that I tried to do the most was the recreation of the informat
 
 It was also very challenging to not be able to be 100% focused on the test.
 
+## website deploy
+
+https://project-serempre-one.vercel.app/
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
